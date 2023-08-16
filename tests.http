@@ -1,0 +1,33 @@
+// Retrieve all users
+###
+GET http://localhost/users
+
+// Create a user
+###
+POST http://localhost/users
+Content-Type: application/json
+
+{
+    "userID": "321",
+    "name": "abc",
+    "email": "abc@gmail.com",
+    "password": 23
+}
+
+# // Retrieve a user (this request is not obligatory) 
+# ###
+# GET http://localhost/api/publicUsers/admin
+
+// Change an existing user
+###
+PUT http://localhost/users/:id
+Content-Type: application/json
+
+{
+    "name": "Marina",
+    "email": "sauerbier@gmail.com"
+}
+
+// Delete a user
+###
+DELETE  http://localhost/users/64dbde57c05a669ef0038ac7
